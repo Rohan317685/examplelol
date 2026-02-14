@@ -90,19 +90,18 @@ function unlock_sector(id, price) {
 }
 
 function update_visuals() {
-    // Update all heat displays
+
     var heats = document.querySelectorAll('.stat-heat-display, #stat-heat');
     heats.forEach(function (h) {
         h.innerText = core_heat.toFixed(1) + "°C";
     });
 
-    // Update all power displays
     var powers = document.querySelectorAll('.stat-power-display, #stat-power');
     powers.forEach(function (p) {
         p.innerText = current_mw_output.toFixed(1) + " MW";
     });
 
-    // Update all stability displays
+
     var stabs = document.querySelectorAll('.stat-stability-display, #stat-stability');
     stabs.forEach(function (s) {
         s.innerText = stability_percent.toFixed(1) + "%";
@@ -167,4 +166,5 @@ function getInfinitePointsNow() {
     alert('Points adjusted for the admin session.');
     update_visuals();
 }
+
 
