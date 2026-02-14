@@ -105,15 +105,7 @@
                         <div class="target-indicator" id="target-box"></div>
                         <div class="current-indicator" id="current-power-marker"></div>
                     </div>
-                    <!-- Duplicate IDs like stat-heat/power/stability were here. Since I am displaying them in the main hub, I should perhaps rename or remove duplicate displays or ensure JS updates all.
-                         Current JS uses getElementById, which only selects the FIRST element. I need to update JS to use querySelectorAll for shared stats OR just rely on the fact that I've designed the page such that meaningful controls are here.
-                         However, the user wants ONE page. Why not keep the stats in the MAIN HUB and remove them from here? 
-                         OR, rename the IDs here to something unique and update JS to update multiple.
-                         The simplest 'human' hack is to change IDs here to classes or just let it be and accept only the first one updates? 
-                         NO, that would break the game-feel.
-                         I'll change the JS to update ALL elements with specific classes. THIS IS THE SMARTER MOVE.
-                         So I will change IDs to Classes for stats.
-                    -->
+                 
                     <div class="metrics-row" style="margin-top:25px;">
                         <div class="metric-card">
                             <span class="m-label">MW OUTPUT</span>
@@ -271,7 +263,7 @@
 
     <!-- Replace old individual IDs with classes in the MAIN block too for consistency -->
     <script>
-        // Update first section IDs to use classes too so the JS can catch them all
+
         document.addEventListener('DOMContentLoaded', function () {
             var sets = [
                 { id: 'stat-heat', cls: 'stat-heat-display' },
@@ -300,5 +292,6 @@
         }
     </script>
 </body>
+
 
 </html>
